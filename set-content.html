@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set content</title>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                $("#text1").text("New text line");
+            });
+            $("#button2").click(function() {
+                $("#text2").html("<b>New bold line</b>");
+            });
+            $("#button3").click(function() {
+                $("#input").val("Your name....");
+            });
+            $("#button4").click(function() {
+                $("#link").attr("href", "https://www.dealslover.net");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="text1">text line 1</p>
+    <p id="text2">text line 2</p>
+    <p>Name: <input type="text" name="text" id="input"></p>
+    <button id="button1">reset text</button>
+    <button id="button2">reset html</button>
+    <button id="button3">reset value</button>
+    <p>
+        <a href="https://janmay007.github.io" id="link">My E-portfolio</a>
+    </p>
+    <button id="button4">change link</button>
+</body>
+
+</html>

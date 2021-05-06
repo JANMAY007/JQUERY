@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append and prepend</title>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                $("p").append("<b>new text</b>");
+            });
+            $("#button2").click(function() {
+                $("ol").append("<li>new list item</li>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>This is a paragraph</p>
+    <ol>
+        <li>Hockey</li>
+        <li>Basketball</li>
+        <li>volleyball</li>
+    </ol>
+    <button id="button1">Append text</button>
+    <button id="button2">Append list items</button>
+</body>
+
+</html>

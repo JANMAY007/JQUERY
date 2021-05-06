@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax and selectors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide(); //to hide a tag
+                //$("#head").hide(); //to hide a id
+                //$(".para").hide(); //to hide a class
+                //$("*").hide(); //to hide complete file
+                //$(this).hide(); //to hide current element
+                //$("p.demo").hide(); //to hide all p tags of demo class
+                //$("ui li:first"); //selects the first li of first ui
+                //$("ui li:first-child"); //selects the first li of every ui
+                //$("[href]"); //selects all elements of href attribute
+                //$("a[target='_blank']"); //selects all a tags with target attribute _blank
+                //$("a[target!='_blank']"); //selects all a tags not with target attribute _blank
+                //$("tr:even"); //selects all even tr tags
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2 id="head">This is the Heading</h2>
+    <p>This is a line of text</p>
+    <p>This is also a line of text</p>
+    <button>Hide</button>
+    <p class="para">This is a Paragraph which is assigned a class</p>
+</body>
+
+</html>

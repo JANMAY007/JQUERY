@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+        #square,
+        #queue {
+            width: 160px;
+            height: 160px;
+            background-color: blue;
+            margin-top: 5px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#square").animate({
+                    left: '800px',
+                    /*height: 'toggle',*/
+                    height: "+=200",
+                    width: "+=200",
+                    opacity: 0.25,
+
+                }, 1000);
+                var queue = $("#queue");
+                queue.animate({
+                    height: "500px",
+                    opacity: "0.66",
+                }, 1000);
+                queue.animate({
+                    width: "500px",
+                    opacity: "0.33",
+                }, 1000);
+                queue.animate({
+                    height: "200px",
+                    opacity: "0.66",
+                }, 1000);
+                queue.animate({
+                    width: "200px",
+                    opacity: "0.33",
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>Animate On</button>
+    <div id="square"></div>
+    <div id="queue"></div>
+</body>
+
+</html>

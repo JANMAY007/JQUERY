@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide effects</title>
+    <script>
+        $(document).ready(function() {
+            $("#topbar").click(function() {
+                $("#panel").slideToggle(1000);
+            });
+        });
+    </script>
+    <style>
+        #panel,
+        #topbar {
+            text-align: center;
+            background-color: yellow;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        
+        #panel {
+            padding: 80px;
+            /*display: none;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topbar">View Panel</div>
+    <div id="panel">This is a panel with sample content</div>
+</body>
+
+</html>

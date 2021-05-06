@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After and Before</title>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                $("img").after("after square");
+            });
+            $("#button2").click(function() {
+                $("img").before("before square");
+            });
+        });
+    </script>
+    <style>
+        img {
+            width: 160px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="button1">insert after</button>
+    <br>
+    <button id="button2">insert before</button>
+    <br>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pixelstalk.net%2Fwp-content%2Fuploads%2F2016%2F07%2FFree-Amazing-Background-Images-Nature.jpg&f=1&nofb=1" alt="image">
+</body>
+
+</html>

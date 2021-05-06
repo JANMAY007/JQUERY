@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop and callback functions</title>
+    <style>
+        #square {
+            background-color: blue;
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            margin-top: 5px;
+        }
+        
+        #rectangle {
+            background-color: blue;
+            width: 160px;
+            height: 100px;
+            position: absolute;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#start").click(function() {
+                $("#square").animate({
+                    left: '800px'
+                }, 1000);
+            });
+            $("#stop").click(function() {
+                $("#square").stop();
+            });
+            $("#callback").click(function() {
+                $("#rectangle").hide(1000, function() {
+                    alert("The rectangle is now hidden")
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    <div id="square"></div>
+    <button id="callback">hide</button>
+    <div id="rectangle"></div>
+</body>
+
+</html>
